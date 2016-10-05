@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SimpleTabBar">
+        <attr name="padding" format="dimension"/>
+        <attr name="margin" format="dimension"/>
+        <attr name="tabWidth" format="dimension"/>
+        <attr name="tabHeight" format="dimension"/>
+        <attr name="indicatorColor" format="color"/>
+        <attr name="indicatorHeight" format="dimension"/>
+    </declare-styleable>
+</resources>
