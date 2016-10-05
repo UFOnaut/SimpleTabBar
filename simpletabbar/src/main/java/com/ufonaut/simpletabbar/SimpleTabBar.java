@@ -22,8 +22,8 @@ import com.ufonaut.simpletabbar.exception.IncorrectAdapterSetException;
 public class SimpleTabBar extends HorizontalScrollView {
 
     private Context context;
-    private int margin;
-    private int padding;
+    private int tabMargin;
+    private int tabPadding;
     private int tabWidth;
     private int tabHeight;
     private int indicatorColor;
@@ -51,8 +51,8 @@ public class SimpleTabBar extends HorizontalScrollView {
     private void initAttributes(AttributeSet attrs) {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.SimpleTabBar, 0, 0);
         try {
-            margin = typedArray.getDimensionPixelSize(R.styleable.SimpleTabBar_margin, 0);
-            padding = typedArray.getDimensionPixelSize(R.styleable.SimpleTabBar_padding, 0);
+            tabMargin = typedArray.getDimensionPixelSize(R.styleable.SimpleTabBar_tabMargin, 0);
+            tabPadding = typedArray.getDimensionPixelSize(R.styleable.SimpleTabBar_tabPadding, 0);
             tabWidth = typedArray.getDimensionPixelSize(R.styleable.SimpleTabBar_tabWidth, 0);
             tabHeight = typedArray.getDimensionPixelSize(R.styleable.SimpleTabBar_tabHeight, 0);
             int defaultIndicatorColor = context.getResources().getColor(R.color.defaultIndicatorColor);
@@ -112,8 +112,8 @@ public class SimpleTabBar extends HorizontalScrollView {
 
     private void addTab(final ViewPager viewPager, final int position) throws IncorrectAdapterSetException {
         View view = newTab(viewPager, position);
-        setMargins(view, margin, margin, margin, margin);
-        view.setPadding(padding, padding, padding, padding);
+        setMargins(view, tabMargin, tabMargin, tabMargin, tabMargin);
+        view.setPadding(tabPadding, tabPadding, tabPadding, tabPadding);
         view.setMinimumWidth(tabWidth);
         view.setMinimumHeight(tabHeight);
         view.setOnClickListener(new OnClickListener() {
