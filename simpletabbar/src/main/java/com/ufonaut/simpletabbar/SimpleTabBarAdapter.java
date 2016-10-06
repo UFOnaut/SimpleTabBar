@@ -19,7 +19,7 @@ public abstract class SimpleTabBarAdapter extends FragmentPagerAdapter {
 
     public abstract CharSequence getPageTitle(int position);
 
-    abstract int getColorResource(int position);
+    public abstract int getColorResource(int position);
 
-    abstract int getIconResource(int position);
+    public abstract int getIconResource(int position);
 }
