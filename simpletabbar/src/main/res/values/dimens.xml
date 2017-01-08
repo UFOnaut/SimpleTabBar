@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="minimumTabWidth">120dp</dimen>
+    <dimen name="minimumTabHeight">50dp</dimen>
+    <dimen name="minimumIndicatorHeight">3dp</dimen>
+    <dimen name="tab_image_size">20dp</dimen>
+    <dimen name="tab_image_margin">5dp</dimen>
+    <dimen name="tab_text_margin">5dp</dimen>
+    <dimen name="tab_text_size">12sp</dimen>
+</resources>

@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="SimpleTabBar">
-        <attr name="padding" format="dimension"/>
-        <attr name="margin" format="dimension"/>
-        <attr name="tabWidth" format="dimension"/>
-        <attr name="tabHeight" format="dimension"/>
-        <attr name="indicatorColor" format="color"/>
-        <attr name="indicatorHeight" format="dimension"/>
+        <attr name="padding" format="dimension" />
+        <attr name="margin" format="dimension" />
+        <attr name="tabWidth" format="dimension" />
+        <attr name="tabHeight" format="dimension" />
+        <attr name="indicatorColor" format="color" />
+        <attr name="indicatorHeight" format="dimension" />
+        <attr name="selectedTabBackgroundColor" format="color" />
+        <attr name="selectedTabTextColor" format="color" />
+        <attr name="selectedTabImageColor" format="color" />
+        <attr name="indicatorLineColor" format="color" />
+        <attr name="noImage" format="boolean" />
+        <attr name="noText" format="boolean" />
+        <attr name="imagePosition" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="top" value="1"/>
+            <enum name="right" value="2"/>
+            <enum name="bottom" value="3"/>
+        </attr>
+        <attr name="imageMargin" format="dimension" />
+        <attr name="imageWidth" format="dimension" />
+        <attr name="imageHeight" format="dimension" />
+        <attr name="textMargin" format="dimension" />
     </declare-styleable>
 </resources>

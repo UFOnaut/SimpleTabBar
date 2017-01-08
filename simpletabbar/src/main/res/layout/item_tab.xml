@@ -8,8 +8,8 @@
     <ImageView
         android:id="@+id/ivImage"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_margin="5dp"
+        android:layout_height="@dimen/tab_image_size"
+        android:layout_margin="@dimen/tab_image_margin"
         android:scaleType="centerInside"
         android:adjustViewBounds="true"/>
 
@@ -19,8 +19,7 @@
         android:layout_height="wrap_content"
         android:textColor="@android:color/white"
         android:gravity="center"
-        android:layout_margin="5dp"
-        android:textSize="12sp"
-        android:text="123"/>
+        android:layout_margin="@dimen/tab_text_margin"
+        android:textSize="@dimen/tab_text_size"/>
 
 </LinearLayout>
