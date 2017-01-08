@@ -23,5 +23,6 @@
         <attr name="imageWidth" format="dimension" />
         <attr name="imageHeight" format="dimension" />
         <attr name="textMargin" format="dimension" />
+        <attr name="textSize" format="dimension" />
     </declare-styleable>
 </resources>
