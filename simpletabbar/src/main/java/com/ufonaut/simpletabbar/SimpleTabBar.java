@@ -8,6 +8,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,6 +41,7 @@ public class SimpleTabBar extends HorizontalScrollView {
     private int imageWidth;
     private int imageHeight;
     private int textMargin;
+    private float textSize;
 
     private LinearLayout llTabs;
     private View indicator;
@@ -85,6 +87,8 @@ public class SimpleTabBar extends HorizontalScrollView {
             imageHeight = typedArray.getDimensionPixelSize(R.styleable.SimpleTabBar_imageHeight, defaultImageSize);
             int defaultTextMargin = context.getResources().getDimensionPixelSize(R.dimen.tab_image_margin);
             textMargin = typedArray.getDimensionPixelSize(R.styleable.SimpleTabBar_textMargin, defaultTextMargin);
+            int defaultTextSize = context.getResources().getDimensionPixelSize(R.dimen.tab_text_size);
+            textSize = typedArray.getDimension(R.styleable.SimpleTabBar_textSize, defaultTextSize);
         } finally {
             typedArray.recycle();
         }
@@ -172,6 +176,7 @@ public class SimpleTabBar extends HorizontalScrollView {
         LinearLayout tabView = (LinearLayout) LayoutInflater.from(context).inflate(R.layout.item_tab, null);
         TextView tv = (TextView) tabView.findViewById(R.id.tvText);
         ImageView iv = (ImageView) tabView.findViewById(R.id.ivImage);
+        tv.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
         setMargins(tv, textMargin, textMargin, textMargin, textMargin);
         setMargins(iv, imageMargin, imageMargin, imageMargin, imageMargin);
         setSizes(iv, imageWidth, imageHeight);
